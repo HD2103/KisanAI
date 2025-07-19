@@ -155,22 +155,104 @@ async def mock_text_to_speech(text: str, language: str) -> str:
     # Return base64 encoded audio placeholder
     return "UklGRjIAAABXQVZFZm10IBIAAAABAAEAQB8AAEAfAAABAAgAZGF0YQ4AAAC"  # Placeholder audio
 
-# STATE-WISE MSP DATA
+# STATE-WISE MSP DATA - Complete Indian Agricultural States
 STATE_MSP_DATA = {
+    "Uttar Pradesh": [
+        {"name": "Wheat", "name_hi": "गेहूं", "name_local": "गेहूं", "msp": 2275, "mandi": 2200},
+        {"name": "Rice", "name_hi": "चावल", "name_local": "चावल", "msp": 2183, "mandi": 2100},
+        {"name": "Sugarcane", "name_hi": "गन्ना", "name_local": "गन्ना", "msp": 315, "mandi": 310},
+        {"name": "Potato", "name_hi": "आलू", "name_local": "आलू", "msp": 2500, "mandi": 2400}
+    ],
     "Maharashtra": [
-        {"name": "Jowar", "name_hi": "ज्वार", "msp": 3000, "mandi": 2850},
-        {"name": "Bajra", "name_hi": "बाजरा", "msp": 2000, "mandi": 1950},
-        {"name": "Soybean", "name_hi": "सोयाबीन", "msp": 4300, "mandi": 4150},
-        {"name": "Cotton", "name_hi": "कपास", "msp": 6080, "mandi": 5900}
+        {"name": "Jowar", "name_hi": "ज्वार", "name_local": "ज्वार", "msp": 3000, "mandi": 2850},
+        {"name": "Bajra", "name_hi": "बाजरा", "name_local": "बाजरा", "msp": 2000, "mandi": 1950},
+        {"name": "Soybean", "name_hi": "सोयाबीन", "name_local": "सोयाबीन", "msp": 4300, "mandi": 4150},
+        {"name": "Cotton", "name_hi": "कपास", "name_local": "कापूस", "msp": 6080, "mandi": 5900},
+        {"name": "Onion", "name_hi": "प्याज", "name_local": "कांदा", "msp": 2800, "mandi": 2650}
     ],
     "Punjab": [
-        {"name": "Wheat", "name_hi": "गेहूं", "msp": 2275, "mandi": 2200},
-        {"name": "Mustard", "name_hi": "सरसों", "msp": 5050, "mandi": 4900},
-        {"name": "Rice", "name_hi": "चावल", "msp": 2183, "mandi": 2100}
+        {"name": "Wheat", "name_hi": "गेहूं", "name_local": "ਕਣਕ", "msp": 2275, "mandi": 2200},
+        {"name": "Rice", "name_hi": "चावल", "name_local": "ਚੌਲ", "msp": 2183, "mandi": 2100},
+        {"name": "Mustard", "name_hi": "सरसों", "name_local": "ਸਰ੍ਹੋਂ", "msp": 5050, "mandi": 4900},
+        {"name": "Maize", "name_hi": "मक्का", "name_local": "ਮੱਕੀ", "msp": 1962, "mandi": 1850}
+    ],
+    "Rajasthan": [
+        {"name": "Bajra", "name_hi": "बाजरा", "name_local": "बाजरा", "msp": 2000, "mandi": 1950},
+        {"name": "Mustard", "name_hi": "सरसों", "name_local": "सरसों", "msp": 5050, "mandi": 4900},
+        {"name": "Barley", "name_hi": "जौ", "name_local": "जौ", "msp": 1735, "mandi": 1680},
+        {"name": "Cumin", "name_hi": "जीरा", "name_local": "जीरा", "msp": 25000, "mandi": 24500}
+    ],
+    "Madhya Pradesh": [
+        {"name": "Wheat", "name_hi": "गेहूं", "name_local": "गेहूं", "msp": 2275, "mandi": 2200},
+        {"name": "Soybean", "name_hi": "सोयाबीन", "name_local": "सोयाबीन", "msp": 4300, "mandi": 4150},
+        {"name": "Cotton", "name_hi": "कपास", "name_local": "कपास", "msp": 6080, "mandi": 5900},
+        {"name": "Gram", "name_hi": "चना", "name_local": "चना", "msp": 5335, "mandi": 5200}
+    ],
+    "Gujarat": [
+        {"name": "Cotton", "name_hi": "कपास", "name_local": "કપાસ", "msp": 6080, "mandi": 5900},
+        {"name": "Groundnut", "name_hi": "मूंगफली", "name_local": "મગફળી", "msp": 5850, "mandi": 5700},
+        {"name": "Bajra", "name_hi": "बाजरा", "name_local": "બાજરી", "msp": 2000, "mandi": 1950},
+        {"name": "Cumin", "name_hi": "जीरा", "name_local": "જીરું", "msp": 25000, "mandi": 24500}
+    ],
+    "Haryana": [
+        {"name": "Wheat", "name_hi": "गेहूं", "name_local": "गेहूं", "msp": 2275, "mandi": 2200},
+        {"name": "Rice", "name_hi": "चावल", "name_local": "चावल", "msp": 2183, "mandi": 2100},
+        {"name": "Mustard", "name_hi": "सरसों", "name_local": "सरसों", "msp": 5050, "mandi": 4900},
+        {"name": "Cotton", "name_hi": "कपास", "name_local": "कपास", "msp": 6080, "mandi": 5900}
+    ],
+    "Karnataka": [
+        {"name": "Rice", "name_hi": "चावल", "name_local": "ಅಕ್ಕಿ", "msp": 2183, "mandi": 2100},
+        {"name": "Ragi", "name_hi": "रागी", "name_local": "ರಾಗಿ", "msp": 3578, "mandi": 3450},
+        {"name": "Cotton", "name_hi": "कपास", "name_local": "ಹತ್ತಿ", "msp": 6080, "mandi": 5900},
+        {"name": "Sugarcane", "name_hi": "गन्ना", "name_local": "ಕಬ್ಬು", "msp": 315, "mandi": 310}
+    ],
+    "Andhra Pradesh": [
+        {"name": "Rice", "name_hi": "चावल", "name_local": "వరి", "msp": 2183, "mandi": 2100},
+        {"name": "Cotton", "name_hi": "कपास", "name_local": "పత్తి", "msp": 6080, "mandi": 5900},
+        {"name": "Groundnut", "name_hi": "मूंगफली", "name_local": "వేరుశెనగ", "msp": 5850, "mandi": 5700},
+        {"name": "Chili", "name_hi": "मिर्च", "name_local": "మిర్చి", "msp": 8000, "mandi": 7800}
+    ],
+    "Telangana": [
+        {"name": "Rice", "name_hi": "चावल", "name_local": "వరి", "msp": 2183, "mandi": 2100},
+        {"name": "Cotton", "name_hi": "कपास", "name_local": "పత్తి", "msp": 6080, "mandi": 5900},
+        {"name": "Maize", "name_hi": "मक्का", "name_local": "మొక్కజొన్న", "msp": 1962, "mandi": 1850},
+        {"name": "Turmeric", "name_hi": "हल्दी", "name_local": "పసుపు", "msp": 15000, "mandi": 14500}
+    ],
+    "Tamil Nadu": [
+        {"name": "Rice", "name_hi": "चावल", "name_local": "அரிசி", "msp": 2183, "mandi": 2100},
+        {"name": "Sugarcane", "name_hi": "गन्ना", "name_local": "கரும்பு", "msp": 315, "mandi": 310},
+        {"name": "Cotton", "name_hi": "कपास", "name_local": "பருத்தி", "msp": 6080, "mandi": 5900},
+        {"name": "Groundnut", "name_hi": "मूंगफली", "name_local": "நிலக்கடலை", "msp": 5850, "mandi": 5700}
+    ],
+    "West Bengal": [
+        {"name": "Rice", "name_hi": "चावल", "name_local": "ধান", "msp": 2183, "mandi": 2100},
+        {"name": "Jute", "name_hi": "जूट", "name_local": "পাট", "msp": 4750, "mandi": 4600},
+        {"name": "Potato", "name_hi": "आलू", "name_local": "আলু", "msp": 2500, "mandi": 2400},
+        {"name": "Mustard", "name_hi": "सरसों", "name_local": "সরিষা", "msp": 5050, "mandi": 4900}
     ],
     "Bihar": [
-        {"name": "Rice", "name_hi": "चावल", "msp": 2183, "mandi": 2100},
-        {"name": "Maize", "name_hi": "मक्का", "msp": 1962, "mandi": 1850}
+        {"name": "Rice", "name_hi": "चावल", "name_local": "चावल", "msp": 2183, "mandi": 2100},
+        {"name": "Wheat", "name_hi": "गेहूं", "name_local": "गेहूं", "msp": 2275, "mandi": 2200},
+        {"name": "Maize", "name_hi": "मक्का", "name_local": "मक्का", "msp": 1962, "mandi": 1850},
+        {"name": "Sugarcane", "name_hi": "गन्ना", "name_local": "गन्ना", "msp": 315, "mandi": 310}
+    ],
+    "Odisha": [
+        {"name": "Rice", "name_hi": "चावल", "name_local": "ଚାଉଳ", "msp": 2183, "mandi": 2100},
+        {"name": "Groundnut", "name_hi": "मूंगफली", "name_local": "ମୁଗଫଳି", "msp": 5850, "mandi": 5700},
+        {"name": "Sesame", "name_hi": "तिल", "name_local": "ତିଳ", "msp": 7307, "mandi": 7100},
+        {"name": "Turmeric", "name_hi": "हल्दी", "name_local": "ହଳଦୀ", "msp": 15000, "mandi": 14500}
+    ],
+    "Kerala": [
+        {"name": "Rice", "name_hi": "चावल", "name_local": "അരി", "msp": 2183, "mandi": 2100},
+        {"name": "Coconut", "name_hi": "नारियल", "name_local": "തെങ്ങ്", "msp": 12000, "mandi": 11500},
+        {"name": "Rubber", "name_hi": "रबर", "name_local": "റബ്ബർ", "msp": 18000, "mandi": 17500},
+        {"name": "Pepper", "name_hi": "काली मिर्च", "name_local": "കുരുമുളക്", "msp": 65000, "mandi": 63000}
+    ],
+    "Assam": [
+        {"name": "Rice", "name_hi": "चावल", "name_local": "ধান", "msp": 2183, "mandi": 2100},
+        {"name": "Tea", "name_hi": "चाय", "name_local": "চাহ", "msp": 35, "mandi": 32},
+        {"name": "Jute", "name_hi": "जूट", "name_local": "পাট", "msp": 4750, "mandi": 4600},
+        {"name": "Mustard", "name_hi": "सरसों", "name_local": "সৰিয়হ", "msp": 5050, "mandi": 4900}
     ]
 }
 
