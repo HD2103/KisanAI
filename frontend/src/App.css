@@ -117,19 +117,20 @@ body {
 
 .hero-section {
   background: linear-gradient(
-    rgba(255, 255, 255, 0.95),
-    rgba(245, 222, 179, 0.95)
+    135deg,
+    rgba(34, 139, 34, 0.1) 0%,    /* Light green */
+    rgba(255, 215, 0, 0.05) 30%,   /* Light golden */
+    rgba(135, 206, 235, 0.1) 70%,  /* Light sky blue */
+    rgba(245, 222, 179, 0.1) 100%  /* Light wheat */
   );
-  background-image: url('https://images.unsplash.com/photo-1600150806193-cf869bcfee05?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2Mzl8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBmYXJtZXJzfGVufDB8fHx8MTc1Mjk1ODcyMnww&ixlib=rb-4.1.0&q=85');
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: overlay;
+  backdrop-filter: blur(5px);
   padding: 4rem 2rem;
   border-radius: 25px;
   margin-bottom: 2rem;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  border: 2px solid rgba(34, 139, 34, 0.2);
 }
 
 .hero-section::before {
@@ -141,9 +142,9 @@ body {
   bottom: 0;
   background: linear-gradient(
     45deg,
-    rgba(34, 139, 34, 0.1) 0%,
-    rgba(255, 215, 0, 0.1) 50%,
-    rgba(101, 67, 33, 0.1) 100%
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(240, 248, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.8) 100%
   );
   z-index: 1;
 }
@@ -153,19 +154,29 @@ body {
   z-index: 2;
 }
 
-.welcome-text {
-  font-size: 3rem;
-  color: #2F4F2F;
-  margin-bottom: 1rem;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+.app-title-hero {
+  font-size: 3.5rem;
+  color: #228B22;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.welcome-text {
+  font-size: 2.2rem;
+  color: #2F4F2F;
+  margin-bottom: 0.8rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
 }
 
 .subtitle {
-  font-size: 1.4rem;
-  color: #654321;
-  margin-bottom: 2rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  color: #556B2F;
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .voice-section {
